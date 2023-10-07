@@ -1,6 +1,6 @@
 #!/bin/bash
 
-pkgbuilds=($(find . -type f -name "PKGBUILD" -not -path "./tcet-linux-pkgbuild/installer/calamares-*/*"))
+pkgbuilds=($(find . -type f -name "PKGBUILD" -not -path "./tcet-linux-pkgbuild/installer/calamares-3.2.62/*"))
  
 for pkgbuild in "${pkgbuilds[@]}"
 do
@@ -12,5 +12,5 @@ do
 
   rm "${pkgbuild}.orig"
 
-  find . -type f -name "*.tar.gz" -not -path "./tcet-linux-pkgbuild/installer/calamares-*/*" -delete 
+  find . -type f -name "*.tar.gz" -not -path "./tcet-linux-pkgbuild/installer/calamares-3.2.62/*" -delete 
 done
